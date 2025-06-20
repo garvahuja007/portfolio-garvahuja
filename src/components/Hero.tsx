@@ -31,6 +31,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="bg-white/10 border-white/30 text-white hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-600 hover:border-transparent transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-blue-500/25 will-change-transform group"
+              onClick={() => window.open('https://github.com/garvahuja007', '_blank')}
             >
               <Github className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
               GitHub
@@ -39,6 +40,7 @@ const Hero = () => {
               variant="outline" 
               size="lg" 
               className="bg-white/10 border-white/30 text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 hover:border-transparent transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-blue-600/25 will-change-transform group"
+              onClick={() => window.open('https://www.linkedin.com/in/garv-ahuja-516416214', '_blank')}
             >
               <Linkedin className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
               LinkedIn
@@ -46,6 +48,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-purple-600 hover:via-pink-600 hover:to-red-600 transition-all duration-500 shadow-lg hover:shadow-purple-500/30 transform hover:scale-105 hover:-translate-y-1 will-change-transform group"
+              onClick={() => window.open('mailto:garvahuja03@gmail.com', '_blank')}
             >
               <Mail className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
               Get In Touch
