@@ -10,15 +10,15 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
           <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 mx-auto mb-8 flex items-center justify-center text-4xl font-bold text-white shadow-2xl">
-            JD
+            GA
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600">
-            John Developer
+            Garv Ahuja
           </h1>
           
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Full-Stack Developer crafting beautiful, functional web experiences with modern technologies
+            Data Engineer & Analyst passionate about creating data products and interactive dashboards with modern technologies
           </p>
           
           <div className="flex gap-4 justify-center mb-12">

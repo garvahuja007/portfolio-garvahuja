@@ -6,23 +6,23 @@ const About = () => {
   const highlights = [
     {
       icon: Code,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable solutions"
+      title: "Data Engineering",
+      description: "ETL processes and data pipeline development"
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
-      description: "Always exploring new technologies"
+      title: "Analytics",
+      description: "Interactive dashboards and business insights"
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "Strong team player and communicator"
+      description: "Cross-functional team player"
     },
     {
       icon: Zap,
-      title: "Performance",
-      description: "Optimized and fast applications"
+      title: "Problem Solving",
+      description: "Efficient data solutions and reporting"
     }
   ];
 
@@ -37,13 +37,18 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                I'm a passionate full-stack developer with 5+ years of experience building 
-                web applications that make a difference. I love turning complex problems 
-                into simple, beautiful solutions.
+                I'm a dedicated Data Engineering student at Guru Tegh Bahadur Institute of Technology, 
+                with hands-on experience in creating data products and interactive dashboards that drive 
+                business decisions.
+              </p>
+              <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                My experience includes working as a Data Engineering Intern at Maruti Suzuki and 
+                Data Analyst Intern at Morepen Laboratories, where I've collaborated with teams to 
+                streamline data processes and improve decision-making efficiency.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing 
-                to open source projects, or sharing knowledge with the developer community.
+                I'm passionate about leveraging data to solve complex problems and am actively involved 
+                in coding communities and sports activities.
               </p>
             </div>
             

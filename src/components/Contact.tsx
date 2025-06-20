@@ -10,19 +10,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "john@example.com",
-      href: "mailto:john@example.com"
+      value: "garvahuja03@gmail.com",
+      href: "mailto:garvahuja03@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "+91 9810243221",
+      href: "tel:+919810243221"
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "New Delhi, India",
       href: "#"
     }
   ];
@@ -41,8 +41,8 @@ const Contact = () => {
                 Get In Touch
               </h3>
               <p className="text-lg text-slate-600 mb-8">
-                I'm always open to discussing new opportunities, interesting projects, 
-                or just having a chat about technology. Feel free to reach out!
+                I'm always open to discussing new opportunities in data engineering and analytics, 
+                interesting projects, or collaborations. Feel free to reach out!
               </p>
             </div>
             

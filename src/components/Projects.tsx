@@ -7,26 +7,34 @@ import { Badge } from "@/components/ui/badge";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      title: "Competitor Analysis Dashboard",
+      description: "Enhanced existing Power BI dashboard report for comprehensive competitor analysis, improving team decision-making capabilities.",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Power BI", "Power Query Editor", "MySQL"],
       github: "#",
       demo: "#"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Vue.js", "Firebase", "Vuetify", "Socket.io"],
+      title: "Sales vs Target Analysis Dashboard",
+      description: "Developed a performance indicating dashboard fetching sales data from server to analyze performance against targets.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Power BI", "Power Query Editor", "MySQL"],
       github: "#",
       demo: "#"
     },
     {
-      title: "AI Content Generator",
-      description: "An intelligent content creation platform powered by machine learning algorithms for automated blog post and social media content generation.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80",
-      technologies: ["Python", "TensorFlow", "React", "FastAPI"],
+      title: "Exam Portal System",
+      description: "Comprehensive exam portal with seamless integration supporting multiple question types including MCQs, with user-friendly interface for exam takers and administrators.",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+      technologies: ["Python", "MySQL"],
+      github: "#",
+      demo: "#"
+    },
+    {
+      title: "Personal Portfolio Website",
+      description: "Designed and developed a dynamic personal portfolio website showcasing technical skills and professional accomplishments with sleek, responsive design.",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
+      technologies: ["HTML", "CSS", "Bootstrap"],
       github: "#",
       demo: "#"
     }
@@ -39,7 +47,7 @@ const Projects = () => {
           Featured Projects
         </h2>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
               <div className="relative overflow-hidden">

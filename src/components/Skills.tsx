@@ -4,30 +4,31 @@ import { Progress } from "@/components/ui/progress";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Frontend",
+      category: "Advanced",
       skills: [
-        { name: "React/Next.js", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Tailwind CSS", level: 90 },
-        { name: "Vue.js", level: 85 }
+        { name: "Python", level: 95 },
+        { name: "SQL", level: 90 },
+        { name: "Power BI", level: 90 }
       ]
     },
     {
-      category: "Backend",
+      category: "Intermediate",
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 80 }
+        { name: "C/C++", level: 80 },
+        { name: "Database Management", level: 85 },
+        { name: "Data Structures & Algorithms", level: 80 },
+        { name: "CSS & HTML5", level: 75 },
+        { name: "Power Query Editor", level: 80 }
       ]
     },
     {
-      category: "Tools & Others",
+      category: "Beginner",
       skills: [
-        { name: "Git/GitHub", level: 95 },
-        { name: "Docker", level: 80 },
-        { name: "AWS", level: 75 },
-        { name: "GraphQL", level: 70 }
+        { name: "Bootstrap", level: 60 },
+        { name: "Java", level: 65 },
+        { name: "Cloud Computing", level: 60 },
+        { name: "Cyber Security", level: 55 },
+        { name: "Spark SQL", level: 65 }
       ]
     }
   ];
