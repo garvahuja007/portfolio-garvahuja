@@ -9,7 +9,7 @@ const Projects = () => {
     {
       title: "Competitor Analysis Dashboard",
       description: "Enhanced existing Power BI dashboard report for comprehensive competitor analysis, improving team decision-making capabilities.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80&fm=webp",
       technologies: ["Power BI", "Power Query Editor", "MySQL"],
       github: "#",
       demo: "#"
@@ -17,7 +17,7 @@ const Projects = () => {
     {
       title: "Sales vs Target Analysis Dashboard",
       description: "Developed a performance indicating dashboard fetching sales data from server to analyze performance against targets.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80&fm=webp",
       technologies: ["Power BI", "Power Query Editor", "MySQL"],
       github: "#",
       demo: "#"
@@ -25,7 +25,7 @@ const Projects = () => {
     {
       title: "Exam Portal System",
       description: "Comprehensive exam portal with seamless integration supporting multiple question types including MCQs, with user-friendly interface for exam takers and administrators.",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80&fm=webp",
       technologies: ["Python", "MySQL"],
       github: "#",
       demo: "#"
@@ -33,7 +33,7 @@ const Projects = () => {
     {
       title: "Personal Portfolio Website",
       description: "Designed and developed a dynamic personal portfolio website showcasing technical skills and professional accomplishments with sleek, responsive design.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=80&fm=webp",
       technologies: ["HTML", "CSS", "Bootstrap"],
       github: "#",
       demo: "#"
@@ -53,8 +53,12 @@ const Projects = () => {
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
-                  alt={project.title}
+                  alt={`${project.title} dashboard interface`}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  width="800"
+                  height="300"
+                  loading={index < 2 ? "eager" : "lazy"}
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>

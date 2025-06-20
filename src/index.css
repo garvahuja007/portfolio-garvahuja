@@ -101,6 +101,12 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+
+  /* Optimize font loading */
+  @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+  }
 }
 
 @layer utilities {
@@ -117,5 +123,18 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Performance optimizations */
+  .will-change-transform {
+    will-change: transform;
+  }
+
+  .contain-layout {
+    contain: layout;
+  }
+
+  .contain-paint {
+    contain: paint;
   }
 }

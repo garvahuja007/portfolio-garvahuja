@@ -4,12 +4,12 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+    <section className="hero-section min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 contain-layout">
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
-          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 mx-auto mb-8 flex items-center justify-center text-4xl font-bold text-white shadow-2xl">
+          <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 mx-auto mb-8 flex items-center justify-center text-4xl font-bold text-white shadow-2xl will-change-transform">
             GA
           </div>
           
@@ -22,22 +22,22 @@ const Hero = () => {
           </p>
           
           <div className="flex gap-4 justify-center mb-12">
-            <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300">
+            <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300 will-change-transform">
               <Github className="w-5 h-5 mr-2" />
               GitHub
             </Button>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300">
+            <Button variant="outline" size="lg" className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300 will-change-transform">
               <Linkedin className="w-5 h-5 mr-2" />
               LinkedIn
             </Button>
-            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg">
+            <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg will-change-transform">
               <Mail className="w-5 h-5 mr-2" />
               Get In Touch
             </Button>
           </div>
         </div>
         
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce will-change-transform">
           <ArrowDown className="w-6 h-6 text-white/60" />
         </div>
       </div>
