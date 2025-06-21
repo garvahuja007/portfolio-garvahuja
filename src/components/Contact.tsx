@@ -4,8 +4,71 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
+
+const formSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter a valid email address"),
+  subject: z.string().min(5, "Subject must be at least 5 characters"),
+  message: z.string().min(10, "Message must be at least 10 characters"),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 const Contact = () => {
+  const { toast } = useToast();
+  
+  const form = useForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: FormData) => {
+    try {
+      // Simulate form submission
+      console.log("Form submitted:", data);
+      
+      // Create mailto link with form data
+      const mailtoLink = `mailto:garvahuja03@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(
+        `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
+      )}`;
+      
+      // Open email client
+      window.open(mailtoLink);
+      
+      // Show success toast
+      toast({
+        title: "Message sent!",
+        description: "Your email client has been opened with your message. Thank you for reaching out!",
+      });
+      
+      // Reset form
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
   const contactInfo = [
     {
       icon: Mail,
@@ -75,52 +138,98 @@ const Contact = () => {
           
           <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm">
             <CardContent className="p-8">
-              <form className="space-y-6">
-                <div className="group">
-                  <label className="block text-sm font-medium text-slate-700 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
-                    Name
-                  </label>
-                  <Input 
-                    placeholder="Your name" 
-                    className="hover:border-indigo-300 focus:border-indigo-500 transition-all duration-300 hover:shadow-md"
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-slate-700 group-hover:text-indigo-600 transition-colors duration-300">
+                          Name
+                        </FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="Your name" 
+                            className="hover:border-indigo-300 focus:border-indigo-500 transition-all duration-300 hover:shadow-md"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                
-                <div className="group">
-                  <label className="block text-sm font-medium text-slate-700 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
-                    Email
-                  </label>
-                  <Input 
-                    type="email" 
-                    placeholder="your.email@example.com"
-                    className="hover:border-indigo-300 focus:border-indigo-500 transition-all duration-300 hover:shadow-md"
+                  
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-slate-700 group-hover:text-indigo-600 transition-colors duration-300">
+                          Email
+                        </FormLabel>
+                        <FormControl>
+                          <Input 
+                            type="email" 
+                            placeholder="your.email@example.com"
+                            className="hover:border-indigo-300 focus:border-indigo-500 transition-all duration-300 hover:shadow-md"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                
-                <div className="group">
-                  <label className="block text-sm font-medium text-slate-700 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
-                    Subject
-                  </label>
-                  <Input 
-                    placeholder="Project inquiry"
-                    className="hover:border-indigo-300 focus:border-indigo-500 transition-all duration-300 hover:shadow-md"
+                  
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-slate-700 group-hover:text-indigo-600 transition-colors duration-300">
+                          Subject
+                        </FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="Project inquiry"
+                            className="hover:border-indigo-300 focus:border-indigo-500 transition-all duration-300 hover:shadow-md"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                
-                <div className="group">
-                  <label className="block text-sm font-medium text-slate-700 mb-2 group-hover:text-indigo-600 transition-colors duration-300">
-                    Message
-                  </label>
-                  <Textarea 
-                    placeholder="Tell me about your project..."
-                    className="min-h-[120px] hover:border-indigo-300 focus:border-indigo-500 transition-all duration-300 hover:shadow-md"
+                  
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-slate-700 group-hover:text-indigo-600 transition-colors duration-300">
+                          Message
+                        </FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Tell me about your project..."
+                            className="min-h-[120px] hover:border-indigo-300 focus:border-indigo-500 transition-all duration-300 hover:shadow-md"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                
-                <Button className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl">
-                  Send Message
-                </Button>
-              </form>
+                  
+                  <Button 
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    disabled={form.formState.isSubmitting}
+                  >
+                    {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              </Form>
             </CardContent>
           </Card>
         </div>
