@@ -14,8 +14,12 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
-          <div className="w-36 h-36 rounded-full bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 mx-auto mb-8 flex items-center justify-center text-4xl font-bold text-white shadow-2xl transform hover:scale-110 hover:rotate-3 transition-all duration-500 will-change-transform cursor-pointer">
-            GA
+          <div className="w-36 h-36 rounded-full bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 mx-auto mb-8 flex items-center justify-center shadow-2xl transform hover:scale-110 hover:rotate-3 transition-all duration-500 will-change-transform cursor-pointer overflow-hidden">
+            <img 
+              src="/lovable-uploads/ff6f66bd-7d06-4127-8ed4-555dcaeb9c78.png" 
+              alt="Garv Ahuja - Professional Portrait"
+              className="w-full h-full object-cover rounded-full"
+            />
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 hover:from-pink-400 hover:via-purple-400 hover:to-cyan-400 transition-all duration-700">
