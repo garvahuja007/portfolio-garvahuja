@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <div className="w-36 h-36 rounded-full bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 mx-auto mb-8 flex items-center justify-center shadow-2xl transform hover:scale-110 hover:rotate-3 transition-all duration-500 will-change-transform cursor-pointer overflow-hidden">
             <img 
-              src="/lovable-uploads/f56ecc2c-0ff3-4b8e-9e43-04e86ef03ca2.png" 
+              src="/lovable-uploads/f0f6f363-20f4-4f50-ba78-ad2e17dd1f2d.png" 
               alt="Garv Ahuja - Professional Portrait"
               className="w-full h-full object-cover rounded-full"
             />
