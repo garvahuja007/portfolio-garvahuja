@@ -1,3 +1,4 @@
+
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -17,7 +18,7 @@ const Hero = () => {
             <img 
               src="/lovable-uploads/3eee30ca-b593-415a-8652-5bcfc7c9f021.png" 
               alt="Garv Ahuja - Professional Portrait"
-              className="w-full h-full object-cover rounded-full"
+              className="w-full h-full object-cover object-center rounded-full"
             />
           </div>
           
