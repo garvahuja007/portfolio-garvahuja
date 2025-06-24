@@ -1,5 +1,4 @@
 
-
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -15,7 +14,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
-          <div className="w-36 h-36 rounded-full bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 mx-auto mb-8 flex items-center justify-center shadow-2xl transform hover:scale-110 hover:rotate-3 transition-all duration-500 will-change-transform cursor-pointer overflow-hidden p-2">
+          <div className="w-36 h-36 rounded-full bg-gradient-to-br from-cyan-400 via-purple-500 to-pink-500 mx-auto mb-8 flex items-center justify-center shadow-2xl transform hover:scale-110 hover:rotate-3 transition-all duration-500 will-change-transform cursor-pointer overflow-hidden">
             <img 
               src="/lovable-uploads/3eee30ca-b593-415a-8652-5bcfc7c9f021.png" 
               alt="Garv Ahuja - Professional Portrait"
@@ -70,4 +69,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
