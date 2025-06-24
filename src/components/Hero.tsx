@@ -1,8 +1,18 @@
 
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
+  const handleDownloadResume = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Assuming the PDF is in the public folder
+    link.download = 'Garv_Ahuja_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="hero-section min-h-screen flex items-center justify-center relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 overflow-hidden contain-layout">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30 animate-pulse"></div>
@@ -48,6 +58,15 @@ const Hero = () => {
             >
               <Linkedin className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
               LinkedIn
+            </Button>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="bg-white/10 border-white/30 text-white hover:bg-gradient-to-r hover:from-green-500 hover:to-emerald-600 hover:border-transparent transition-all duration-500 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-green-500/25 will-change-transform group"
+              onClick={handleDownloadResume}
+            >
+              <Download className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" />
+              Resume
             </Button>
             <Button 
               size="lg" 
